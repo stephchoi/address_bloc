@@ -3,7 +3,7 @@ require_relative '../models/address_book'
 class MenuController
     attr_reader :address_book
    
-    def initialization
+    def initialize
         @address_book = AddressBook.new
     end
     
