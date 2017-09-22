@@ -3,12 +3,12 @@ require_relative '../models/address_book'
 class MenuController
     attr_reader :address_book
    
-    def initialization
+    def initialize
         @address_book = AddressBook.new
     end
     
     def main_menu
-        #puts "Main Menu - #{address_book.entries} entries"
+        puts "Main Menu - #{@address_book.entries.length} entries"
         puts "1 - View all entries"
         puts "2 - Create an entry"
         puts "3 - Search for an entry"
@@ -55,11 +55,11 @@ class MenuController
         
         print "Please input entry number:"
         n = gets.to_i
-        
-        if n < address_book.entries.count
+
+        if @address_book.entries[n - 1]
             system "clear"
             puts "Entry #{n} is: "
-            puts address_book.entries[n]
+            puts address_book.entries[n - 1]
             
             puts "Press enter to return to menu"
             gets.chomp
