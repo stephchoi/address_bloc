@@ -49,4 +49,8 @@ class AddressBook
             end
         end
    end
+   
+   def bomb
+       entries.clear
+   end
 end

@@ -52,7 +52,7 @@ class MenuController
     
     def nuke
         puts "3...2...1...BOOM!"
-        address_book.entries.clear
+        address_book.bomb
         puts "All Clear"
     end
     
